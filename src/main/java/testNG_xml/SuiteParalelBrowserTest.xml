@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Colección en Paralelo" verbose="1" parallel="tests">
+
+  <!-- Suite ### Front - End - Chrome ###-->
+  <test name="TestLogin">
+    <parameter name="Browser." value="Chrome"/>
+    <classes>
+      <class name= "Test.Firefox.TestLogin"/>
+    </classes>
+  </test>
+  <!-- Suite ### Front - End - Firefox###-->
+  <test name="TestSmoke">
+    <parameter name="Browser" value="Firefox"/>
+    <classes>
+      <class name= "Test.Firefox.TestBaseExample"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

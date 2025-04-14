@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Colección en Paralelo" verbose="1" parallel="tests">
+
+  <!-- Suite ### Front - End  - Chrome###-->
+  <test name="TestALogin">
+    <parameter name="number-of-times" value="10"/>
+    <classes>
+      <class name= "Test.Firefox.TestLogin"/>
+    </classes>
+  </test>
+  <test name="TestBSmoke">
+    <parameter name="number-of-times" value="30"/>
+    <classes>
+      <class name= "Test.Firefox.TestSmoke"/>
+    </classes>
+  </test>
+  <test name="TestCAddUser">
+    <parameter name="number-of-times" value="30"/>
+    <classes>
+      <class name= "Test.Firefox.TestAddUser"/>
+    </classes>
+  </test>
+  <test name="TestDUpdateUser">
+    <parameter name="number-of-times" value="200"/>
+    <classes>
+      <class name= "Test.Firefox.TestUpdateUser"/>
+    </classes>
+  </test>
+  <test name="TestDeleteUser">
+    <parameter name="number-of-times" value="300"/>
+    <classes>
+      <class name= "Test.Firefox.TestDeleteUser"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

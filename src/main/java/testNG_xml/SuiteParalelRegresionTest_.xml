@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Colección en Paralelo" verbose="1" parallel="tests">
+
+  <!-- Suite ### Front - End  - Chrome###-->
+  <test name="Test1">
+    <parameter name="number-of-times" value="30"/>
+    <classes>
+      <class name= "Test.Firefox.TestAddUser"/>
+    </classes>
+  </test>
+  <test name="Test2">
+    <parameter name="number-of-times" value="200"/>
+    <classes>
+      <class name= "Test.Firefox.TestUpdateUser"/>
+    </classes>
+  </test>
+  <test name="Test3">
+    <parameter name="number-of-times" value="300"/>
+    <classes>
+      <class name= "Test.Firefox.TestDeleteUser"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

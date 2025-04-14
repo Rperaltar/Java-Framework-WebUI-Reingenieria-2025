@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Colección en Paralelo" verbose="1" parallel="tests">
+
+  <!-- Suite ### Front - End  - Chrome###-->
+  <test name="TestLogin">
+    <parameter name="number-of-times" value="10"/>
+    <classes>
+      <class name= "Test.Firefox.TestLogin"/>
+    </classes>
+  </test>
+  <test name="TestActivacion">
+    <parameter name="number-of-times" value="30"/>
+    <classes>
+      <class name= "Test.Chrome.TestActivacion"/>
+    </classes>
+  </test>
+  <test name="TestClientes">
+    <parameter name="number-of-times" value="60"/>
+    <classes>
+      <class name= "Test.Chrome.TestClientes"/>
+    </classes>
+  </test>
+  <test name="TestSolicitudes">
+    <parameter name="number-of-times" value="80"/>
+    <classes>
+      <class name= "Test.Chrome.TestSolicitudes"/>
+    </classes>
+  </test>
+  <test name="TestSmoke">
+    <parameter name="number-of-times" value="100"/>
+    <classes>
+      <class name= "Test.Chrome.TestSmoke"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->
