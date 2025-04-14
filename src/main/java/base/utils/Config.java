@@ -10,7 +10,7 @@ public class Config {
     public Config() {
         properties = new Properties();
         try {
-            FileInputStream fis = new FileInputStream("src/main/resources/config.properties");
+            FileInputStream fis = new FileInputStream("src/main/resources/log4j.properties");
             properties.load(fis);
         } catch (IOException e) {
             e.printStackTrace();

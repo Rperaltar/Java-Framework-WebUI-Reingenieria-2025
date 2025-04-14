@@ -14,7 +14,7 @@ public class ExcelTypesUtil {
     private Workbook workbook;
     private Sheet sheet;
 
-    public static String excelPath  = "src/main/resources/Input.xlsx/";
+    public static String excelPath  = "src/main/resources/input.xlsx/";
     public static String sheetName  = "Hoja1";
     ExcelTypesUtil excelTypesUtil;
 

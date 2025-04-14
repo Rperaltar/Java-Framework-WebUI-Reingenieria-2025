@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 
 public class ExcelUtils {
 
-    private static final String FILE_PATH = "resources/Input.xlsx/";
+    private static final String FILE_PATH = "resources/input.xlsx/";
 
     public static String getData(int row, int column) {
         try {
