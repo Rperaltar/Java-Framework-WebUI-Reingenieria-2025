@@ -26,7 +26,7 @@ public class TestBaseExample extends BaseTest {
 
         test = extent.createTest("Login Test1");
         try {
-            screenshotElementUtil.captureElementScreenshot(driver, page.LABEL_STORE, "screenshotElement/elementLabelAshot3.png");
+            screenshotElementUtil.captureElementScreenshot(driver, page.LABEL_STORE, Constant.ALLPATH_ASHOT_ELEMENT_WEB);
             test.log(Status.PASS, "Inyecciòn fue exitoso");
         } catch (Exception e) {
             test.log(Status.FAIL, "Inyecciòn falló: " + e.getMessage());

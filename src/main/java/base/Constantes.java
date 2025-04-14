@@ -49,7 +49,7 @@ public class Constantes {
     public static String RFC_LOCATOR     = "rfc";
 
     //Variables - para almacenar las - URL´ de la pagina a desplegar y para los driver de los "Navegadores"
-    public static String DRIVER_PATH = "C:\\Users\\saulf\\Documents\\Automation_MIT\\Reingenieria Java Framework\\Java-Proyect-FrontEnd-2025\\src\\main\\java\\drivers\\";
+    public static String DRIVER_PATH = "C:\\Users\\saulf\\Documents\\Automation_Proyects\\Reingenieria Java Framework\\Java-Proyect-FrontEnd-2025\\src\\main\\java\\drivers\\";
 
     //Variables - para almacenar las rutas de los archivos que se utilizan en "Apache Poi"
     public static String EXCEL_PATH         = "";
