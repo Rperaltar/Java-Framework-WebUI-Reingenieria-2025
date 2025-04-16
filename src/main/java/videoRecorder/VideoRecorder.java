@@ -21,6 +21,16 @@ public class VideoRecorder extends ScreenRecorder {
     public static ScreenRecorder screenRecorder;
     public static String name;
 
+    /**
+     * Constructs a new VideoRecorder instance with the specified graphics configuration
+     * and output file. This recorder is configured to capture video using the
+     * TechSmith Screen Capture codec and save it in AVI format.
+     *
+     * @param "cfg"  The graphics configuration that determines the screen area to record.
+     * @param //file The file where the recorded video will be saved.
+     * @throws IOException  If an I/O error occurs while initializing the recorder.
+     * @throws AWTException If the platform configuration does not allow low-level input control.
+     */
     public VideoRecorder(GraphicsConfiguration cfg, File file) throws IOException, AWTException {
         super(cfg, cfg.getBounds(),
                         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI),
@@ -35,14 +45,9 @@ public class VideoRecorder extends ScreenRecorder {
     }
 
     /**
-     * Constructs a new VideoRecorder instance with the specified graphics configuration
-     * and output file. This recorder is configured to capture video using the
-     * TechSmith Screen Capture codec and save it in AVI format.
+     * Starts recording the screen and saves the video to the specified directory.
      *
-     * @param "cfg"  The graphics configuration that determines the screen area to record.
-     * @param //file The file where the recorded video will be saved.
-     * @throws IOException  If an I/O error occurs while initializing the recorder.
-     * @throws AWTException If the platform configuration does not allow low-level input control.
+     * @throws Exception if an error occurs during the recording process.
      */
     public static void startRecording() throws Exception {
         File file = new File("./videos/");
@@ -55,6 +60,11 @@ public class VideoRecorder extends ScreenRecorder {
         screenRecorder.start();
     }
 
+    /**
+     * Stops the screen recording session.
+     *
+     * @throws Exception if an error occurs while stopping the screen recorder.
+     */
     public static void stopRecording() throws Exception {
         screenRecorder.stop();
     }

@@ -4,7 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
+
+    /**
+     * The WebDriver instance used to interact with the web browser.
+     * This is protected to allow access within the same package or subclasses.
+     */
     protected WebDriver driver;
+
     /**
      * Constructor for the BasePage class.
      * Initializes the WebDriver instance and sets up the PageFactory
