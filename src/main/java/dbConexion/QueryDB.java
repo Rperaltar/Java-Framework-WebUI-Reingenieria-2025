@@ -1,15 +1,28 @@
 package dbConexion;
 
 
-import base.utils.QueryDBConstant;
+import base.instances.QueryDBInstance;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class QueryDB extends QueryDBConstant {
+public class QueryDB {
+    /**
+     * A final instance of the DatabaseConnection class used to manage
+     * the connection to the database. This ensures that the connection
+     * remains consistent and cannot be reassigned after initialization.
+     */
+    private final DatabaseConnection dbConnection;
 
+    /**
+     * Constructor for the QueryDB class.
+     * Initializes a new instance of the DatabaseConnection and assigns it to the dbConnection field.
+     */
+    public QueryDB() {
+        this.dbConnection = new DatabaseConnection();
+    }
     /**
      * Retrieves all user-related order details from the database and prints the OrderID and ProductID
      * for each record in the result set.

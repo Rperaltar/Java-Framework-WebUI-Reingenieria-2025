@@ -1,14 +1,23 @@
 package dbConexion;
 
 
-import base.utils.DatabaseConnectionConstant;
+import base.instances.DatabaseConnectionInstance;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseConnection extends DatabaseConnectionConstant {
+public class DatabaseConnection {
 
+    public static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=Northwind;user=;password=;encrypt=true;trustServerCertificate=true;";
+    public static final String USER = "sa";
+    public static final String PASSWORD = "123456";
+
+    /**
+     * Represents a database connection instance.
+     * This field is used to establish and manage the connection to the database.
+     */
+    private Connection connection;
     /**
      * Establishes and returns a database connection.
      * If the connection is null or closed, a new connection is created using the

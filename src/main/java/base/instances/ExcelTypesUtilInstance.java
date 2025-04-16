@@ -1,9 +1,9 @@
-package base.utils;
+package base.instances;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
-public class ExcelTypesUtilConstant {
+public class ExcelTypesUtilInstance {
 
     /**
      * Represents a workbook instance, typically used for managing and manipulating

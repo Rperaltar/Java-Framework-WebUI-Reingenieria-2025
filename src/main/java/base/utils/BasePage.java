@@ -1,10 +1,11 @@
-package base;
+package base.utils;
 
-import base.utils.BasePageConstant;
+
+import base.instances.BasePageIntance;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage extends BasePageConstant {
+public class BasePage extends BasePageIntance {
 
     /**
      * Constructor for the BasePage class.

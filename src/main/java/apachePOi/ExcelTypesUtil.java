@@ -1,6 +1,7 @@
 package apachePOi;
 
-import base.utils.ExcelTypesUtilConstant;
+
+import base.instances.ExcelTypesUtilInstance;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -11,7 +12,7 @@ import static java.sql.Types.BOOLEAN;
 import static java.sql.Types.NUMERIC;
 import static org.apache.xmlbeans.impl.piccolo.xml.Piccolo.STRING;
 
-public class ExcelTypesUtil extends ExcelTypesUtilConstant {
+public class ExcelTypesUtil extends ExcelTypesUtilInstance {
 
     /**
      * The file path to the Excel file used as input.

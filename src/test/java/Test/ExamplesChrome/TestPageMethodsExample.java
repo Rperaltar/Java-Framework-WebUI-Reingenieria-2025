@@ -1,10 +1,10 @@
 package Test.ExamplesChrome;
 
-import base.Constant;
+import base.utils.Constant;
 import PageModelMethods.MethodsHomePage;
 import com.aventstack.extentreports.Status;
 import org.testng.annotations.Test;
-import base.BaseTest;
+import base.utils.BaseTest;
 import screenShoot.ScreenshotUtils;
 
 import java.awt.*;

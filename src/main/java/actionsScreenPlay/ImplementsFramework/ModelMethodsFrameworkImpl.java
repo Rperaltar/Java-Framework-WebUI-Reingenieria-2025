@@ -2,7 +2,7 @@ package actionsScreenPlay.ImplementsFramework;
 
 import actionsScreenPlay.InterfacesFramework.ModelMethodsFrameworkInterface;
 
-import base.Constantes;
+import base.utils.Constantes;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;

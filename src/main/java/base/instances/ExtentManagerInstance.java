@@ -1,9 +1,9 @@
-package base.utils;
+package base.instances;
 
-import base.Constant;
+import base.utils.Constant;
 import com.aventstack.extentreports.ExtentReports;
 
-public class ExtentManagerConstant extends Constant {
+public class ExtentManagerInstance extends Constant {
 
     /**
      * A static instance of ExtentReports used for generating and managing test reports.

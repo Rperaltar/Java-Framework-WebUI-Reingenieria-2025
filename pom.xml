@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>12.2.0.jre11</version> <!-- Asegúrate de usar la versión adecuada para tu JDK -->
+            <version>7.4.1.jre8</version> <!-- Usa la versión que te convenga -->
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>

@@ -1,8 +1,8 @@
-package base.utils;
+package base.instances;
 
 import org.openqa.selenium.WebDriver;
 
-public class BasePageConstant {
+public class BasePageIntance {
 
     /**
      * The WebDriver instance used to interact with the web browser.

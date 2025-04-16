@@ -1,11 +1,12 @@
 package extentReportHtml;
 
-import base.utils.ExtentManagerConstant;
+
+import base.instances.ExtentManagerInstance;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager extends ExtentManagerConstant {
+public class ExtentManager extends ExtentManagerInstance {
 
     /**
      * Retrieves the singleton instance of the ExtentReports object. If the instance

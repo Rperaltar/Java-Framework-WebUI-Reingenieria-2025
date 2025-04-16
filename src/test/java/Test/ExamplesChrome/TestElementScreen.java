@@ -4,7 +4,7 @@ package Test.ExamplesChrome;
 import PageModel.LoginPageElementScrenShot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import base.BaseTest;
+import base.utils.BaseTest;
 import screenshotElement.ScreenshotElementUtil;
 
 public class TestElementScreen extends BaseTest {

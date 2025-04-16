@@ -1,19 +1,5 @@
-package base;
+package base.utils;
 
-import actionsScreenPlay.Implements.ModelActionsImpl;
-import actionsScreenPlay.Implements.ModelAssertImpl;
-import actionsScreenPlay.Implements.ModelWaitsImpl;
-import actionsScreenPlay.Interfaces.ModelActionsInterface;
-import actionsScreenPlay.Interfaces.ModelAssertInterface;
-import actionsScreenPlay.Interfaces.ModelWaitsInterface;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import videoRecorder.VideoRecorder;
-
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

@@ -1,6 +1,6 @@
 package apachePOi;
 
-import base.utils.ExcelUtilsConstant;
+import base.instances.ExcelUtilsInstance;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelUtils extends ExcelUtilsConstant {
+public class ExcelUtils extends ExcelUtilsInstance {
 
     /**
      * Retrieves data from an Excel file at the specified row and column.

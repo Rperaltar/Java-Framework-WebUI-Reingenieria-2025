@@ -1,12 +1,12 @@
-package base;
+package base.utils;
 
-import base.utils.BaseTestConstant;
+import base.instances.BaseTestInstance;
 import extentReportHtml.ExtentManager;
 import org.testng.annotations.*;
 import videoRecorder.VideoRecorder;
 import webDriver.Rdriver;
 
-public class BaseTest extends BaseTestConstant {
+public class BaseTest extends BaseTestInstance {
 
     /**
      * Sets up the WebDriver for the test execution.

@@ -3,7 +3,7 @@ package PageModelMethods;
 import PageModel.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import base.BaseTest;
+import base.utils.BaseTest;
 import apachePOi.ExcelUtils;
 
 public class MethodsHomePage extends BaseTest {

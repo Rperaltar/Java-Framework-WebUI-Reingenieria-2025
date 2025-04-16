@@ -1,9 +1,9 @@
-package base.utils;
+package base.instances;
 
 
 import java.sql.Connection;
 
-public class DatabaseConnectionConstant {
+public class DatabaseConnectionInstance {
 
     /**
      * The connection URL for the SQL Server database.

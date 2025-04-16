@@ -1,6 +1,6 @@
-package base.utils;
+package base.instances;
 
-public class ExcelUtilsConstant {
+public class ExcelUtilsInstance {
     
     /**
      * The constant FILE_PATH represents the path to the input Excel file.
