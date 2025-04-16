@@ -101,10 +101,31 @@ public class BaseTest extends Constant{
      *
      * @throws Exception if an error occurs during the execution of the actions.
      */
+    private void getUrlWeb() throws Exception {
+        getUrl();
+            maximize();
+                startRecording();
+        return;
+    }
+
+    /**
+     * Navigates to the specified URL defined in the Constant.TOOLS_QA variable
+     * using the provided WebDriver instance.
+     *
+     * @throws Exception if an error occurs during the URL navigation process.
+     */
     private void getUrl() throws Exception {
         actions.getUrl(Constant.TOOLS_QA, driver);
+        return;
+    }
+
+    /**
+     * Maximizes the browser window using the provided driver instance.
+     *
+     * @throws Exception if an error occurs during the maximize operation.
+     */
+    private void maximize() throws Exception {
         actions.maximize(driver);
-            startRecording();
         return;
     }
 
@@ -131,10 +152,23 @@ public class BaseTest extends Constant{
      */
     private void close() throws Exception {
             stopRecording();
+                   closeDriver();
+        //System.out.println("No existe reporte Web");
+    }
+
+    /**
+     * Closes the WebDriver instance if it is not null.
+     * This method ensures that the WebDriver is properly terminated
+     * to release resources and avoid potential memory leaks.
+     *
+     * @throws Exception if an error occurs during the WebDriver termination process.
+     */
+    private void closeDriver() throws Exception {
         if (driver != null) {
             driver.quit();
         }
         return;
         //System.out.println("No existe reporte Web");
     }
+
 }
