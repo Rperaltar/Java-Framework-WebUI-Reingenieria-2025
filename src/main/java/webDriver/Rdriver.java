@@ -16,26 +16,20 @@ import org.openqa.selenium.opera.OperaOptions;
 
 public class Rdriver extends Constantes {
 
-    /*
-    ##########################################
-    #                                        #
-    #  Clase - Rdriver                       #
-    #  Se crean 4 Objetos de tipo WebDriver  #
-    #   1.- CreateChromeDriver               #
-    #   2.- CreateFireFox                    #
-    #   3.- CreateInternetExplorerDriver     #
-    #   4.- CreateOperaDriver                #
-    #  para levantar la sesión deseada       #
-    #  a nivel navegador.                     #
-    #                                        #
-    ##########################################
-    */
-
-    // Constructor de la clase - Rdriver
+    /**
+     * Default constructor for the Rdriver class.
+     * This constructor initializes an instance of the Rdriver class.
+     */
     public Rdriver(){
     }
 
-    // Objeto - que crea las propiedades de tipo de sistema operativo y levanta la sessión con el driver - "GECKO_DRIVER"
+    /**
+     * Modifies the given driver path by appending ".exe" if the operating system is Windows.
+     *
+     * @param driverPath The original driver path as a string.
+     * @return The modified driver path with ".exe" appended if the OS is Windows,
+     *         otherwise returns the original driver path.
+     */
     private static String modifyIfWindows(String driverPath) {
         if (System.getProperty("os.name").toLowerCase().contains("windows")){
             return driverPath + ".exe";
@@ -44,7 +38,18 @@ public class Rdriver extends Constantes {
         }
     }
 
-    //Metodo - que crea los Objetos de tipo "WebDriver" para cada navegador agregando algunas Opciones
+    /**
+     * Creates and returns a WebDriver instance configured to run in incognito/private mode
+     * based on the specified driver type.
+     *
+     * @param driverType The type of WebDriver to create. Supported values are:
+     *                   "chromedriver" for Google Chrome,
+     *                   "geckodriver" for Mozilla Firefox,
+     *                   "operadriver" for Opera,
+     *                   "IEDriverServer" for Internet Explorer,
+     *                   "msedgedriver" for Microsoft Edge.
+     * @return A WebDriver instance configured for incognito/private mode, or null if the driver type is unsupported.
+     */
     private static WebDriver getIncognito(String driverType) {
 
         //Incognito Options for firefox
@@ -82,6 +87,16 @@ public class Rdriver extends Constantes {
 
       return null;
     }
+
+    /**
+     * Creates a new instance of a Firefox WebDriver.
+     *
+     * @param driverPath The path to the directory containing the GeckoDriver executable.
+     * @param incognito  A boolean flag indicating whether to launch the browser in incognito mode.
+     *                   If true, the browser will be launched in incognito mode.
+     * @return A WebDriver instance for Firefox. If incognito mode is enabled, the browser will
+     *         be configured accordingly.
+     */
     //Objeto Compuesto del metodo "modifyIfWindows y getIncognito" - tipo Session WebDriver en el navegador de Firefox
     public static WebDriver CreateFireFox(String driverPath, boolean incognito){
         System.setProperty("webdriver.gecko.driver", modifyIfWindows(driverPath + GECKO_DRIVER));
@@ -90,7 +105,15 @@ public class Rdriver extends Constantes {
         }
         return new FirefoxDriver();
     }
-    //Objeto Compuesto del metodo "modifyIfWindows y getIncognito" - tipo Session WebDriver en el navegador de Chrome
+
+    /**
+     * Creates and initializes a Chrome WebDriver instance.
+     *
+     * @param driverPath The path to the directory containing the ChromeDriver executable.
+     * @param incognito  A boolean flag indicating whether to launch the browser in incognito mode.
+     * @return A WebDriver instance for Chrome. If incognito is true, the browser is launched in incognito mode.
+     * @throws IllegalStateException If the ChromeDriver executable cannot be found or initialized.
+     */
     public  static WebDriver CreateChromeDriver(String driverPath, boolean incognito) {
         System.setProperty("webdriver.chrome.driver", modifyIfWindows(driverPath + CHROME_DRIVER));
         if (incognito) {
@@ -98,7 +121,16 @@ public class Rdriver extends Constantes {
         }
         return new ChromeDriver();
     }
-    //Objeto Compuesto del metodo "modifyIfWindows y getIncognito" - tipo Session WebDriver en el navegador de ExplorerDriver
+
+    /**
+     * Creates and returns an instance of an Internet Explorer WebDriver.
+     *
+     * @param driverpath The path to the directory containing the Internet Explorer WebDriver executable.
+     * @param incognito  A boolean flag indicating whether to launch the browser in incognito mode.
+     *                   If true, the browser will be launched in incognito mode.
+     * @return A WebDriver instance for Internet Explorer. If incognito mode is enabled,
+     *         the browser will be configured accordingly.
+     */
     public static WebDriver CreateInternetExplorerDriver(String driverpath, boolean incognito){
         System.setProperty("webdriver.ie.driver", modifyIfWindows(driverpath + IE_DRIVER));
         if(incognito){
@@ -106,7 +138,15 @@ public class Rdriver extends Constantes {
         }
         return new InternetExplorerDriver();
     }
-    //Objeto Compuesto del metodo "modifyIfWindows y getIncognito" - tipo Session WebDriver en el navegador de Opera
+
+    /**
+     * Creates and returns an instance of a WebDriver configured for the Opera browser.
+     *
+     * @param driverpath The file path to the Opera WebDriver executable.
+     * @param incognito  A boolean flag indicating whether to launch the browser in incognito mode.
+     *                   If true, the browser will be launched in incognito mode.
+     * @return A WebDriver instance configured for the Opera browser.
+     */
     public static WebDriver CreateOperaDriver(String driverpath, boolean incognito){
         if(incognito){
             return getIncognito(OPERA_DRIVER);
@@ -117,7 +157,15 @@ public class Rdriver extends Constantes {
         return new OperaDriver(operaOptions);
 
     }
-    //Objeto Compuesto del metodo "modifyIfWindows y getIncognito" - tipo Session WebDriver en el navegador de ExplorerDriver
+
+    /**
+     * Creates and initializes a new instance of the Edge WebDriver.
+     *
+     * @param driverpath The path to the directory containing the Edge WebDriver executable.
+     *                    This path will be modified if the operating system is Windows.
+     * @return A new instance of the EdgeDriver configured with default EdgeOptions.
+     * @throws IllegalStateException If the WebDriver executable cannot be found or loaded.
+     */
     public static WebDriver CreateEdgeDriver(String driverpath){
         System.setProperty("webdriver.edge.driver", modifyIfWindows(driverpath + EDGE_DRIVER));
         return new EdgeDriver(new EdgeOptions());

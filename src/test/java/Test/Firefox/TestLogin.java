@@ -43,7 +43,6 @@ public class TestLogin {
     @BeforeTest
     public void setUpDriver() throws IOException, AWTException, IOException, AWTException {
             extent = ExtentManager.getExtent();
-            System.out.println(Constantes.MS_SETUP + new Object() {}.getClass());
         driver = Rdriver.CreateEdgeDriver(Constantes.DRIVER_PATH);
         actions.getUrl(Constant.TOOLS_QA, driver);
         actions.maximize(driver);

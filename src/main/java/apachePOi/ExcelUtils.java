@@ -5,11 +5,21 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 public class ExcelUtils {
 
     private static final String FILE_PATH = "resources/input.xlsx/";
-
+    /**
+     * Retrieves data from an Excel file at the specified row and column.
+     *
+     * @param row    The row index (0-based) from which to retrieve the data.
+     * @param column The column index (0-based) from which to retrieve the data.
+     * @return The string value of the cell at the specified row and column, or null if an error occurs.
+     * @throws IOException If there is an issue with file input/output operations.
+     * @throws IllegalArgumentException If the specified row or column is invalid.
+     * @throws NullPointerException If the cell at the specified location is null.
+     */
     public static String getData(int row, int column) {
         try {
             FileInputStream fis = new FileInputStream(new File(FILE_PATH));

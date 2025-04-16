@@ -13,6 +13,11 @@ import static org.monte.media.VideoFormatKeys.*;
 
 public class VideoRecorder extends ScreenRecorder {
 
+    /**
+     * A static variable to hold an instance of the ScreenRecorder.
+     * This can be used to manage screen recording operations such as starting,
+     * stopping, and saving recordings.
+     */
     public static ScreenRecorder screenRecorder;
     public static String name;
 
@@ -29,6 +34,16 @@ public class VideoRecorder extends ScreenRecorder {
         VideoRecorder.name = name;
     }
 
+    /**
+     * Constructs a new VideoRecorder instance with the specified graphics configuration
+     * and output file. This recorder is configured to capture video using the
+     * TechSmith Screen Capture codec and save it in AVI format.
+     *
+     * @param "cfg"  The graphics configuration that determines the screen area to record.
+     * @param //file The file where the recorded video will be saved.
+     * @throws IOException  If an I/O error occurs while initializing the recorder.
+     * @throws AWTException If the platform configuration does not allow low-level input control.
+     */
     public static void startRecording() throws Exception {
         File file = new File("./videos/");
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

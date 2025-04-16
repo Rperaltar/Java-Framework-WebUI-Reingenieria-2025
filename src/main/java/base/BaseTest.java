@@ -16,17 +16,8 @@ import org.testng.annotations.*;
 import videoRecorder.VideoRecorder;
 import webDriver.Rdriver;
 
-public class BaseTest{
-    private String optionsDriver;
-    protected ExtentTest test;
-    public static WebDriver driver;
-    protected ExtentReports extent;
-    private VideoRecorder videoRecorder;
+public class BaseTest extends Constant{
 
-    public static ModelActionsInterface actions = new ModelActionsImpl();
-    public static ModelWaitsInterface waits = new ModelWaitsImpl();
-    public static ModelAssertInterface Assert = new ModelAssertImpl();
-    public static Logger log = LogManager.getLogger(BaseTest.class.getName());
 
     @BeforeTest
     public void setUpDriver() throws Exception {
@@ -42,7 +33,6 @@ public class BaseTest{
     }
     private void extentManager(){
         extent = ExtentManager.getExtent();
-             System.out.println(Constantes.MS_SETUP + new Object() {}.getClass());
         return;
 
     }
