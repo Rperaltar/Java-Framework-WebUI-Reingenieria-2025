@@ -1,22 +1,12 @@
 package base;
 
-import actionsScreenPlay.Implements.ModelActionsImpl;
-import actionsScreenPlay.Implements.ModelAssertImpl;
-import actionsScreenPlay.Implements.ModelWaitsImpl;
-import actionsScreenPlay.Interfaces.ModelActionsInterface;
-import actionsScreenPlay.Interfaces.ModelAssertInterface;
-import actionsScreenPlay.Interfaces.ModelWaitsInterface;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import base.utils.BaseTestConstant;
 import extentReportHtml.ExtentManager;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import videoRecorder.VideoRecorder;
 import webDriver.Rdriver;
 
-public class BaseTest extends Constant{
+public class BaseTest extends BaseTestConstant {
 
     /**
      * Sets up the WebDriver for the test execution.
@@ -101,10 +91,10 @@ public class BaseTest extends Constant{
      *
      * @throws Exception if an error occurs during the execution of the actions.
      */
-    private void getUrlWeb() throws Exception {
-        getUrl();
-            maximize();
-                startRecording();
+    private void getUrl() throws Exception {
+            getUrlnull();
+                 maximize();
+                    startRecording();
         return;
     }
 
@@ -114,7 +104,7 @@ public class BaseTest extends Constant{
      *
      * @throws Exception if an error occurs during the URL navigation process.
      */
-    private void getUrl() throws Exception {
+    private void getUrlnull() throws Exception {
         actions.getUrl(Constant.TOOLS_QA, driver);
         return;
     }
@@ -151,24 +141,10 @@ public class BaseTest extends Constant{
      *                   or quitting the WebDriver.
      */
     private void close() throws Exception {
-            stopRecording();
-                   closeDriver();
-        //System.out.println("No existe reporte Web");
-    }
-
-    /**
-     * Closes the WebDriver instance if it is not null.
-     * This method ensures that the WebDriver is properly terminated
-     * to release resources and avoid potential memory leaks.
-     *
-     * @throws Exception if an error occurs during the WebDriver termination process.
-     */
-    private void closeDriver() throws Exception {
+        stopRecording();
         if (driver != null) {
             driver.quit();
         }
         return;
-        //System.out.println("No existe reporte Web");
     }
-
 }

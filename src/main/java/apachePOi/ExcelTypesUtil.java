@@ -1,5 +1,6 @@
 package apachePOi;
 
+import base.utils.ExcelTypesUtilConstant;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -10,9 +11,8 @@ import static java.sql.Types.BOOLEAN;
 import static java.sql.Types.NUMERIC;
 import static org.apache.xmlbeans.impl.piccolo.xml.Piccolo.STRING;
 
-public class ExcelTypesUtil {
-    private Workbook workbook;
-    private Sheet sheet;
+public class ExcelTypesUtil extends ExcelTypesUtilConstant {
+
     /**
      * The file path to the Excel file used as input.
      * This path points to the "input.xlsx" file located in the "src/main/resources" directory.
@@ -32,10 +32,13 @@ public class ExcelTypesUtil {
     public void ExcelUtils(String excelPath, String sheetName) {
         excelTypesUtil.ExcelUtilsMethod(excelPath,sheetName);
     }
+
+
     public String getCellData(int rowNum, int colNum) {
         excelTypesUtil.getCellDataMethod(rowNum,colNum);
         return "";
     }
+
     /**
      * Initializes the workbook and sheet objects for the specified Excel file and sheet name.
      *
@@ -52,6 +55,7 @@ public class ExcelTypesUtil {
             e.printStackTrace();
         }
     }
+
     /**
      * Retrieves the data from a specific cell in a spreadsheet based on the given row and column numbers.
      *

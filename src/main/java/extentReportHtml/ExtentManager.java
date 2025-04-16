@@ -1,18 +1,11 @@
 package extentReportHtml;
 
-import base.Constant;
+import base.utils.ExtentManagerConstant;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager extends Constant {
-
-    /**
-     * A static instance of ExtentReports used for generating and managing test reports.
-     * ExtentReports is a library that provides detailed and customizable reporting
-     * for automated tests.
-     */
-    private static ExtentReports extent;
+public class ExtentManager extends ExtentManagerConstant {
 
     /**
      * Retrieves the singleton instance of the ExtentReports object. If the instance

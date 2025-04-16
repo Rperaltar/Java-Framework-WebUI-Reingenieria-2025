@@ -20,27 +20,6 @@ import java.util.Date;
 public class Constant {
 
     /**
-     * Logger instance for the BaseTest class.
-     * This logger is used to log messages for debugging and tracking purposes.
-     * It is initialized using the LogManager with the name of the BaseTest class.
-     */
-    public static String optionsDriver;
-    protected ExtentTest test;
-    public static WebDriver driver;
-    protected ExtentReports extent;
-    private VideoRecorder videoRecorder;
-
-    /**
-     * A static instance of the ModelActionsInterface, initialized with an implementation
-     * of ModelActionsImpl. This can be used to perform actions defined in the
-     * ModelActionsInterface throughout the application.
-     */
-    public static ModelActionsInterface actions = new ModelActionsImpl();
-    public static ModelWaitsInterface waits = new ModelWaitsImpl();
-    public static ModelAssertInterface Assert = new ModelAssertImpl();
-    public static Logger log = LogManager.getLogger(BaseTest.class.getName());
-
-    /**
      * A constant string that holds the URL for the Guru99 registration page.
      * This URL points to the registration form on the Guru99 demo website.
      */

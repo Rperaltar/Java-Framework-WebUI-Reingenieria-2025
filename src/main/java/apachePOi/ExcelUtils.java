@@ -1,5 +1,6 @@
 package apachePOi;
 
+import base.utils.ExcelUtilsConstant;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -7,9 +8,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class ExcelUtils {
+public class ExcelUtils extends ExcelUtilsConstant {
 
-    private static final String FILE_PATH = "resources/input.xlsx/";
     /**
      * Retrieves data from an Excel file at the specified row and column.
      *
