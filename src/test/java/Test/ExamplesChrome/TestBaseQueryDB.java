@@ -1,4 +1,4 @@
-package Test.Firefox;
+package Test.ExamplesChrome;
 
 import org.testng.annotations.Test;
 import dbConexion.QueryDB;

@@ -1,4 +1,4 @@
-package Test.Firefox;
+package Test.ExamplesChrome;
 
 import base.Constant;
 import PageModelMethods.MethodsHomePage;

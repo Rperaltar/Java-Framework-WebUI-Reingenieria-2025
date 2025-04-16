@@ -1,4 +1,4 @@
-package Test.Firefox;
+package Test.ExamplesChrome;
 
 import actionsScreenPlay.Implements.ModelActionsImpl;
 import actionsScreenPlay.Implements.ModelAssertImpl;

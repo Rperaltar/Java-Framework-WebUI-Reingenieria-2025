@@ -6,14 +6,14 @@
   <test name="TestLogin">
     <parameter name="Browser." value="Chrome"/>
     <classes>
-      <class name= "Test.Firefox.TestLogin"/>
+      <class name= "Test.ExamplesChrome.TestLogin"/>
     </classes>
   </test>
   <!-- Suite ### Front - End - Firefox###-->
   <test name="TestSmoke">
     <parameter name="Browser" value="Firefox"/>
     <classes>
-      <class name= "Test.Firefox.TestBaseExample"/>
+      <class name= "Test.ExamplesChrome.TestBaseExample"/>
     </classes>
   </test>
 </suite> <!-- Suite -->
