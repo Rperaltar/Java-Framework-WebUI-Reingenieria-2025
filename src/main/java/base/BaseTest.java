@@ -92,9 +92,9 @@ public class BaseTest extends BaseTestConstant {
      * @throws Exception if an error occurs during the execution of the actions.
      */
     private void getUrl() throws Exception {
-            getUrlnull();
-                 maximize();
-                    startRecording();
+            getUrlMethod();
+                 maximizeMethod();
+                     startRecording();
         return;
     }
 
@@ -104,7 +104,7 @@ public class BaseTest extends BaseTestConstant {
      *
      * @throws Exception if an error occurs during the URL navigation process.
      */
-    private void getUrlnull() throws Exception {
+    private void getUrlMethod() throws Exception {
         actions.getUrl(Constant.TOOLS_QA, driver);
         return;
     }
@@ -114,7 +114,7 @@ public class BaseTest extends BaseTestConstant {
      *
      * @throws Exception if an error occurs during the maximize operation.
      */
-    private void maximize() throws Exception {
+    private void maximizeMethod() throws Exception {
         actions.maximize(driver);
         return;
     }
