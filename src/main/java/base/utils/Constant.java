@@ -59,4 +59,13 @@ public class Constant {
     public static String NAME_ASHOT_ELEMENT_WEB = "ashotElementWeb_";
     public static String EXT_ASHOT_ELEMENT_WEB = ".png";
     public static String ALLPATH_ASHOT_ELEMENT_WEB = PATH_ASHOT_ELEMENT_WEB + NAME_ASHOT_ELEMENT_WEB + TIME_STAMP + EXT_ASHOT_ELEMENT_WEB;
+
+    /**
+     * The file path where the CSV data is stored or will be saved.
+     * This path points to the "data.csv" file located in the "outputCSV" directory.
+     */
+    public String filePath;
+    public String FilePath = "outputCSV/data.csv";
 }
+
+

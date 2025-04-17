@@ -26,7 +26,7 @@ public class TestCsvWriter extends BaseTest {
         String url = driver.getCurrentUrl();
         String source = driver.getPageSource();
 
-        test = extent.createTest("Login Test1");
+            test = extent.createTest("Login Test1");
         try {
             screenshotElementUtil.captureElementScreenshot(driver, page.LABEL_STORE, Constant.ALLPATH_ASHOT_ELEMENT_WEB);
 
@@ -41,13 +41,15 @@ public class TestCsvWriter extends BaseTest {
             csvWriter.addRow(new String[]{title, url, source});
 
             System.out.println("CSV creado exitosamente en: " + filePath);
+            ScreenshotUtils.takeScreenshot(driver, Constant.PATH_ASHOT + Constant.NAME_ASHOOT + Constant.TIME_STAMP + ".jpg");
+                Assert.assertTrue(true,driver.getCurrentUrl());
+                System.out.print(Constant.TOOLS_QA + " " + "-" + "url result" );
             test.log(Status.PASS, "CSV creado exitosamente");
         } catch (Exception e) {
             test.log(Status.FAIL, "CSV creado falló: " + e.getMessage());
-                Assert.assertTrue(true,driver.getCurrentUrl());
-                System.out.print(Constant.TOOLS_QA + " " + "-" + "url result" );
-                ScreenshotUtils.takeScreenshot(driver, Constant.PATH_ASHOT + Constant.NAME_ASHOOT + Constant.TIME_STAMP + ".jpg");
+
+
         }
 
-            }
-        }
+    }
+}
