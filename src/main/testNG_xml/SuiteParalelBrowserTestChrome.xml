@@ -6,7 +6,6 @@
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="Test.ExamplesChrome.TestBaseExample"/>
-      <class name="Test.ExamplesChrome.TestApachePoi"/>
     </classes>
   </test>
 
@@ -15,7 +14,6 @@
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="Test.ExamplesChrome.TestBaseExample"/>
-      <class name="Test.ExamplesChrome.TestApachePoi"/>
     </classes>
   </test>
 
@@ -24,7 +22,6 @@
     <parameter name="browser" value="edge"/>
     <classes>
       <class name="Test.ExamplesChrome.TestBaseExample"/>
-      <class name="Test.ExamplesChrome.TestApachePoi"/>
     </classes>
   </test>
 

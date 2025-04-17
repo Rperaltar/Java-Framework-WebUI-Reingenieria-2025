@@ -143,7 +143,7 @@ public class BaseTest extends BaseTestInstance {
     private void close() throws Exception {
         stopRecording();
         if (driver != null) {
-            driver.quit();
+            driver.close();
         }
         return;
     }
