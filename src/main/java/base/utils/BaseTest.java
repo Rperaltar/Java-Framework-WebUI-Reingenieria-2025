@@ -18,8 +18,7 @@ public class BaseTest extends BaseTestInstance {
     @BeforeTest
     public void setUpDriver() throws Exception {
             extentManager();
-                createFireFoxDriver();
-                                  getUrl();
+
     }
 
     /**
@@ -30,8 +29,8 @@ public class BaseTest extends BaseTestInstance {
      */
     @AfterTest
     public void closeExtent() throws Exception {
-        extenFlush();
-                 close();
+            extenFlush();
+                     close();
         //System.out.println("No existe reporte Web");
     }
 
@@ -39,10 +38,13 @@ public class BaseTest extends BaseTestInstance {
      * Initializes the extent report manager by retrieving the extent instance
      * from the ExtentManager. This method does not return any value.
      */
-    private void extentManager(){
-        extent = ExtentManager.getExtent();
+    private void extentManager()
+    {
+            this.ExtentManager();
+            return;
+    } private void ExtentManager(){
+            extent = ExtentManager.getExtent();
         return;
-
     }
 
     /**
@@ -52,7 +54,7 @@ public class BaseTest extends BaseTestInstance {
      * @throws Exception if an error occurs during the recording process.
      */
     private void startRecording() throws Exception {
-        VideoRecorder.startRecording();
+            VideoRecorder.startRecording();
         return;
     }
 
@@ -62,7 +64,7 @@ public class BaseTest extends BaseTestInstance {
      * @throws Exception if an error occurs while stopping the recording.
      */
     private void stopRecording() throws Exception {
-        VideoRecorder.stopRecording();
+            VideoRecorder.stopRecording();
         return;
     }
 
@@ -76,12 +78,17 @@ public class BaseTest extends BaseTestInstance {
      *
      * @throws Exception if an error occurs during the WebDriver creation process.
      */
-    private void createFireFoxDriver() throws Exception {
+    public void createEdgeDriver() throws Exception
+    {
+            this.CreateEdgeDriver();
+        return;
+    } private void CreateEdgeDriver() throws Exception {
         if (optionsDriver == null)
             driver = Rdriver.CreateEdgeDriver(Constantes.DRIVER_PATH);
-        else {
+        return;
+    } public void createFireFox() throws Exception {
+        if (optionsDriver == null)
             driver = Rdriver.CreateFireFox(Constantes.DRIVER_PATH,true);
-        }
         return;
     }
 
@@ -91,10 +98,13 @@ public class BaseTest extends BaseTestInstance {
      *
      * @throws Exception if an error occurs during the execution of the actions.
      */
-    private void getUrl() throws Exception {
-            getUrlMethod();
-                 maximizeMethod();
-                     startRecording();
+    protected void maximize() throws Exception
+    {
+                 this.Maximize();
+                 this.startRecording();
+        return;
+    } private void Maximize() throws Exception {
+                actions.maximize(driver);
         return;
     }
 
@@ -104,18 +114,13 @@ public class BaseTest extends BaseTestInstance {
      *
      * @throws Exception if an error occurs during the URL navigation process.
      */
-    private void getUrlMethod() throws Exception {
-        actions.getUrl(Constant.TOOLS_QA, driver);
+    public void getUrl(String url) throws Exception
+    {
+            this.GetUrl(url);
         return;
-    }
-
-    /**
-     * Maximizes the browser window using the provided driver instance.
-     *
-     * @throws Exception if an error occurs during the maximize operation.
-     */
-    private void maximizeMethod() throws Exception {
-        actions.maximize(driver);
+    } public void GetUrl(String url) throws Exception {
+            actions.getUrl(Constant.TOOLS_QA, driver);
+        maximize();
         return;
     }
 
@@ -124,10 +129,14 @@ public class BaseTest extends BaseTestInstance {
      * is written to the report file. This method should be called after
      * all test information has been logged to finalize the report.
      */
-    private void extenFlush(){
-            extent.flush();
+    private void extenFlush()
+    {
+            this.ExtenFlush();
         return;
 
+    } private void ExtenFlush(){
+            extent.flush();
+        return;
     }
 
     /**
@@ -140,7 +149,13 @@ public class BaseTest extends BaseTestInstance {
      * @throws Exception if an error occurs while stopping the video recording
      *                   or quitting the WebDriver.
      */
-    private void close() throws Exception {
+    private void close() throws Exception
+    {
+            this.stopRecording();
+            this.Close();
+
+        return;
+    } private void Close() throws Exception {
         stopRecording();
         if (driver != null) {
             driver.close();
