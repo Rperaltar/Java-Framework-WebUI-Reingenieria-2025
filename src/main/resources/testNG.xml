@@ -1,7 +1,7 @@
 <suite name="TestSuite - Proyecto Demo">
     <test name="LoginTests">
         <classes>
-            <class name="Test.ExamplesChrome.TestBaseExample"/>
+            <class name="Test.proyectQA.test.TestBaseExample"/>
         </classes>
     </test>
 </suite>

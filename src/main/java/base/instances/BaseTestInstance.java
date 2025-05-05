@@ -1,11 +1,11 @@
 package base.instances;
 
-import actionsScreenPlay.Implements.ModelActionsImpl;
-import actionsScreenPlay.Implements.ModelAssertImpl;
-import actionsScreenPlay.Implements.ModelWaitsImpl;
-import actionsScreenPlay.Interfaces.ModelActionsInterface;
-import actionsScreenPlay.Interfaces.ModelAssertInterface;
-import actionsScreenPlay.Interfaces.ModelWaitsInterface;
+import actionsSeleniumWd.Implements.ModelActionsImpl;
+import actionsSeleniumWd.Implements.ModelAssertImpl;
+import actionsSeleniumWd.Implements.ModelWaitsImpl;
+import actionsSeleniumWd.Interfaces.ModelActionsInterface;
+import actionsSeleniumWd.Interfaces.ModelAssertInterface;
+import actionsSeleniumWd.Interfaces.ModelWaitsInterface;
 import base.utils.BaseTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

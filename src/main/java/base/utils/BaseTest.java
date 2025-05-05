@@ -17,8 +17,7 @@ public class BaseTest extends BaseTestInstance {
      */
     @BeforeTest
     public void setUpDriver() throws Exception {
-            extentManager();
-
+            this.extentManager();
     }
 
     /**
@@ -29,8 +28,8 @@ public class BaseTest extends BaseTestInstance {
      */
     @AfterTest
     public void closeExtent() throws Exception {
-            extenFlush();
-                     close();
+            this.extenFlush();
+                     this.close();
         //System.out.println("No existe reporte Web");
     }
 
@@ -120,7 +119,7 @@ public class BaseTest extends BaseTestInstance {
         return;
     } public void GetUrl(String url) throws Exception {
             actions.getUrl(Constant.TOOLS_QA, driver);
-        maximize();
+        this.maximize();
         return;
     }
 
@@ -156,7 +155,6 @@ public class BaseTest extends BaseTestInstance {
 
         return;
     } private void Close() throws Exception {
-        stopRecording();
         if (driver != null) {
             driver.close();
         }

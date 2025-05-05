@@ -6,7 +6,7 @@
   <test name="TestLogin">
     <parameter name="number-of-times" value="10"/>
     <classes>
-      <class name= "Test.ExamplesChrome.TestLogin"/>
+      <class name= "Test.proyectQA.test.TestLogin"/>
     </classes>
   </test>
   <test name="TestActivacion">
