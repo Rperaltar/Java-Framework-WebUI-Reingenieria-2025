@@ -116,10 +116,11 @@ public class BaseTest extends BaseTestInstance {
     public void getUrl(String url) throws Exception
     {
             this.GetUrl(url);
+            this.maximize();
+
         return;
     } public void GetUrl(String url) throws Exception {
-            actions.getUrl(Constant.TOOLS_QA, driver);
-        this.maximize();
+            actions.getUrl(url,driver);
         return;
     }
 
